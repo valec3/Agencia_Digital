@@ -25,3 +25,14 @@ var swiper = new Swiper(".mySwiper", {
         },
     },
 });
+const menu = document.querySelector("#menu");
+const navbar = document.querySelector(".navbar")
+menu.addEventListener("click",()=>{
+    menu.classList.toggle("toggle");
+    navbar.classList.toggle("toggle");
+})
+
+window.document.addEventListener("scroll",()=>{
+    menu.classList.remove("toggle")
+    navbar.classList.remove("toggle")
+})

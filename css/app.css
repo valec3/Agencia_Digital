@@ -19,6 +19,7 @@
 }
 html{
     color: #1a1919;
+    overflow-x: hidden;
 }
 
 
@@ -113,6 +114,43 @@ body::after{
     width: 100%;
 }
 
+@media (max-width: 768px){
+    .header{
+        position: relative;
+        
+    }
+    .header .navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 70vw;
+        position: absolute;
+        top: 0;
+        right: -110%;
+        background-color: #93c6fa;
+        padding: 1rem 0;
+        transition: right .5s;
+    }
+    .header .navbar.toggle{
+        right: 0;
+    }
+    .navbar .navbar__links{
+        flex-direction: column;
+        gap: 2rem;
+    } 
+    .navbar__links{
+        gap: 1rem;
+        width: 10rem;
+    }
+    .navbar__links a{
+        margin: 0;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+/* hero */
+
 
 .hero{
     display: flex;
@@ -188,6 +226,14 @@ body::after{
 .work__text h2{
     margin: 1rem 0;
 }
+@media (max-width: 768px){
+    .work{
+        padding: 0 1rem ;
+    }
+}
+
+
+/* testimonial */
 .testimonial .heading{
     max-width: 600px;
     text-align: center;
@@ -299,4 +345,26 @@ color: #1a1919;
     font-weight: bold;
     font-size: 1rem;
     text-align: center;
+}
+
+.toggleMenu{
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    gap: .05rem;
+    height: 100%;
+    padding: .1rem;
+}
+@media (max-width: 768px){
+    .toggleMenu{
+        display: flex;
+        padding-top: 1rem;
+        z-index: 99;
+    }
+}
+.toggleMenu span{ 
+    display: block;
+    height: .19rem;
+    width: 1rem;
+    background-color: #3270c2;
 }
