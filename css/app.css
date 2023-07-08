@@ -1,0 +1,23 @@
+:root{
+    --primario:#451;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    color: blanchedalmond;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.container{
+    max-width:75rem ;
+    margin: 0 auto;
+}
